@@ -2,9 +2,10 @@
 
 ### Dotty Version: 0.19.0-RC1
 
-I'm doing self-learning about how to do FP in scala by trying to convert the existing scala codes into Dotty version of them. 
+I'm doing self-learning about how to do FP in dotty, 
+by trying to convert the existing scala codes into Dotty version of them. 
 
-Here are three articles or projects re-written in Dotty, two are about `tagless final encoding` and the other is about `IO Monad`.
+I have re-written three code bases in Dotty, two are about `tagless final encoding` and the other is about `IO Monad`.
 
 
 *  IO Monad by John A. De Goes,
@@ -19,7 +20,7 @@ Here are three articles or projects re-written in Dotty, two are about `tagless 
 
 IO Commands of Tagless Final in dotty
 ---
-```code scala
+```scala
 package fpmax
 
 import scala.util.Try
@@ -204,7 +205,7 @@ object stdlib {
 
 Expression of Tagless Final in dotty
 ---
-```code scala
+```scala
 package fpmax
 
 trait Exp[T] {
@@ -394,7 +395,7 @@ def fromTree3[T: Exp : Mult](t: Tree): Either[ErrMsg, T] = fix(fromTreeExt2[T] _
 
 User Application of Tagless Final in dotty
 ---
-```code scala
+```scala
 import scala.util.Random
 
 object DataSource {
